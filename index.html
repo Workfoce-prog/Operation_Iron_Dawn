@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>Operation Iron Dawn</title>
   <style>
     html, body { margin: 0; padding: 0; height: 100%; background: black; }
@@ -10,16 +10,16 @@
 </head>
 <body>
   <canvas id="unity-canvas"></canvas>
-  <script src="Build/Build.loader.js"></script>
+  <script src="Build.loader.js"></script>
   <script>
     createUnityInstance(document.querySelector("#unity-canvas"), {
-      dataUrl: "Build/Build.data",
-      frameworkUrl: "Build/Build.framework.js",
-      codeUrl: "Build/Build.wasm",
+      dataUrl: "Build.data",
+      frameworkUrl: "Build.framework.js",
+      codeUrl: "Build.wasm",
     }).then((unityInstance) => {
       console.log("Unity loaded");
     }).catch((message) => {
-      alert("Unity load error: " + message);
+      alert(message);
     });
   </script>
 </body>
